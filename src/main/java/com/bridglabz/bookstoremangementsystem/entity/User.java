@@ -1,11 +1,11 @@
 package com.bridglabz.bookstoremangementsystem.entity;
 
 public class User {
-	String id;
-	String name;
-	String mobile;
-	String email;
-	String address;
+	private String id;
+	private String name;
+	private String mobile;
+	private String email;
+	private String address;
 	
 	public User() {
 	}
