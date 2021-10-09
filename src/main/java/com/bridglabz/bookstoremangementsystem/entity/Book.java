@@ -1,12 +1,12 @@
 package com.bridglabz.bookstoremangementsystem.entity;
 
 public class Book {
-	String bookName;
-	String bookId;
-	String bookAuthor;
-	String bookType;
-	String bookPrice;
-	String bookDesc;
+	private String bookName;
+	private String bookId;
+	private String bookAuthor;
+	private String bookType;
+	private String bookPrice;
+	private String bookDesc;
 
 	public Book() {
 		super();
@@ -28,51 +28,51 @@ public class Book {
 				+ bookType + ", bookPrice=" + bookPrice + ", bookDesc=" + bookDesc + "]";
 	}
 
-	protected String getBookName() {
+	public String getBookName() {
 		return bookName;
 	}
 
-	protected void setBookName(String bookName) {
+	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
 
-	protected String getBookId() {
+	public String getBookId() {
 		return bookId;
 	}
 
-	protected void setBookId(String bookId) {
+	public void setBookId(String bookId) {
 		this.bookId = bookId;
 	}
 
-	protected String getBookAuthor() {
+	public String getBookAuthor() {
 		return bookAuthor;
 	}
 
-	protected void setBookAuthor(String bookAuthor) {
+	public void setBookAuthor(String bookAuthor) {
 		this.bookAuthor = bookAuthor;
 	}
 
-	protected String getBookType() {
+	public String getBookType() {
 		return bookType;
 	}
 
-	protected void setBookType(String bookType) {
+	public void setBookType(String bookType) {
 		this.bookType = bookType;
 	}
 
-	protected String getBookPrice() {
+	public String getBookPrice() {
 		return bookPrice;
 	}
 
-	protected void setBookPrice(String bookPrice) {
+	public void setBookPrice(String bookPrice) {
 		this.bookPrice = bookPrice;
 	}
 
-	protected String getBookDesc() {
+	public String getBookDesc() {
 		return bookDesc;
 	}
 
-	protected void setBookDesc(String bookDesc) {
+	public void setBookDesc(String bookDesc) {
 		this.bookDesc = bookDesc;
 	}
 
