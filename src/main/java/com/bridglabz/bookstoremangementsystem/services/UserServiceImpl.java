@@ -2,7 +2,7 @@ package com.bridglabz.bookstoremangementsystem.services;
 
 import com.bridglabz.bookstoremangementsystem.interfaces.IUserService;
 
-public class ServiceImpl implements IUserService{
+public class UserServiceImpl implements IUserService{
 
 	@Override
 	public void add() {
