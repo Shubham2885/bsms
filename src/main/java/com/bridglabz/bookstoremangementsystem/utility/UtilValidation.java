@@ -9,4 +9,20 @@ public class UtilValidation {
 		Matcher matcher = pattern.matcher(input);
 		return matcher.find();
 	}
+	
+	//by Krishna.
+	public static void isEmpty(Object obj) {
+		
+		System.out.println(obj+" is Empty ");
+	}
+	
+	public static boolean isNull(Object obj) {
+		
+		return obj==null;
+	}
+	
+	public static boolean isNotNull(Object obj) {
+		
+		return obj!=null;
+	}
 }
