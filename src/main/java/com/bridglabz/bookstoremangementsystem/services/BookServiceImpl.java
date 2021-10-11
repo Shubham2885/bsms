@@ -45,18 +45,22 @@ public class BookServiceImpl implements IBookService {
 			
 			if(UtilValidation.isValid(book.getBookId(), UtilRegex.BOOKID) && UtilValidation.isValid(book.getBookName(), UtilRegex.NAME)
 					&& UtilValidation.isValid(book.getBookAuthor(), UtilRegex.NAME) && UtilValidation.isValid(book.getBookType(), UtilRegex.NAME) && UtilValidation.isValid(book.getBookPrice(), UtilRegex.PRICE) ) {
-				  setBookDB(bookdb);
+				bookdb.add(book);
+				setBookDB(bookdb);
 				
 			}
 			
 		}
+		
 	}
 
 
 
 	@Override
 	public void deleteBookbyId(Book book, String id) {
-		// TODO Auto-generated method stub
+		if(!book.getBookId().isEmpty() && book.getBookId().equals(id)) {
+			bookdb.deleteById(id);
+		}
 
 	}
 
