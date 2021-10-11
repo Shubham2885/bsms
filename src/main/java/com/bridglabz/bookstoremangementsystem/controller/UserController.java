@@ -3,14 +3,14 @@ package com.bridglabz.bookstoremangementsystem.controller;
 import java.util.Scanner;
 
 import com.bridglabz.bookstoremangementsystem.entity.User;
-import com.bridglabz.bookstoremangementsystem.exception.NullDetails;
+import com.bridglabz.bookstoremangementsystem.exception.BookStoreMangementSystemException;
 import com.bridglabz.bookstoremangementsystem.services.UserServiceImpl;
 import com.bridglabz.bookstoremangementsystem.utility.UtilScanner;
 
 public class UserController {
 
 	//addUser By Manoj
-	public void addUser() throws NullDetails {
+	public void addUser() throws BookStoreMangementSystemException {
 		User user = new User();
 		UserServiceImpl userService = new UserServiceImpl();
 		Scanner sc = new Scanner(System.in);

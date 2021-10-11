@@ -30,4 +30,10 @@ public class UserDao implements IUserDao {
 		
 	}
 
+	@Override
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

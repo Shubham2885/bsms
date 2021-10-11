@@ -1,5 +1,7 @@
 package com.bridglabz.bookstoremangementsystem.interfaces;
 
+import java.util.List;
+
 import com.bridglabz.bookstoremangementsystem.entity.User;
 
 public interface IUserDao {
@@ -7,4 +9,5 @@ public interface IUserDao {
 	void deleteById(int id);
 	void searchById(int id);
 	void updateById(int id);
+	List<User> getAllUser();
 }

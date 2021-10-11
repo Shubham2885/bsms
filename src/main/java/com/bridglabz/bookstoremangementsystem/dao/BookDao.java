@@ -29,4 +29,10 @@ public class BookDao implements IBookDao {
 	public void updateById(String id) {
 		
 	}
+
+	@Override
+	public List<Book> getAllBook() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
