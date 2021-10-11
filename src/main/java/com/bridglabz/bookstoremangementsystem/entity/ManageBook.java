@@ -1,4 +1,5 @@
 package com.bridglabz.bookstoremangementsystem.entity;
+
 //Dinesh
 public class ManageBook {
 	private String id;
@@ -8,6 +9,10 @@ public class ManageBook {
 	private String quantity;
 	private String totalPrice;
 	private String dateOfReturn;
+
+	public ManageBook() {
+		super();
+	}
 
 	public ManageBook(String id, String userId, String bookId, String dateOfIssue, String quantity, String totalPrice,
 			String dateOfReturn) {
