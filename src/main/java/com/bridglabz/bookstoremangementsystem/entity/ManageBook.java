@@ -1,21 +1,23 @@
 package com.bridglabz.bookstoremangementsystem.entity;
 
 //Dinesh
+import java.sql.Date;
+
 public class ManageBook {
 	private String id;
 	private String userId;
 	private String bookId;
-	private String dateOfIssue;
+	private Date dateOfIssue;
 	private String quantity;
 	private String totalPrice;
-	private String dateOfReturn;
+	private Date dateOfReturn;
 
 	public ManageBook() {
 		super();
 	}
 
-	public ManageBook(String id, String userId, String bookId, String dateOfIssue, String quantity, String totalPrice,
-			String dateOfReturn) {
+	public ManageBook(String id, String userId, String bookId, Date dateOfIssue, String quantity, String totalPrice,
+			Date dateOfReturn) {
 		super();
 		this.id = id;
 		this.userId = userId;
@@ -56,11 +58,11 @@ public class ManageBook {
 		this.bookId = bookId;
 	}
 
-	public String getDateOfIssue() {
+	public Date getDateOfIssue() {
 		return dateOfIssue;
 	}
 
-	public void setDateOfIssue(String dateOfIssue) {
+	public void setDateOfIssue(Date dateOfIssue) {
 		this.dateOfIssue = dateOfIssue;
 	}
 
@@ -80,11 +82,11 @@ public class ManageBook {
 		this.totalPrice = totalPrice;
 	}
 
-	public String getDateOfReturn() {
+	public Date getDateOfReturn() {
 		return dateOfReturn;
 	}
 
-	public void setDateOfReturn(String dateOfReturn) {
+	public void setDateOfReturn(Date dateOfReturn) {
 		this.dateOfReturn = dateOfReturn;
 	}
 
