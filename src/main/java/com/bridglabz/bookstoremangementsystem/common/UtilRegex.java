@@ -1,4 +1,4 @@
-package com.bridglabz.bookstoremangementsystem.utility;
+package com.bridglabz.bookstoremangementsystem.common;
 
 public class UtilRegex {
 	public static final String ID = "^[0-9]{3}$";

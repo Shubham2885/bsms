@@ -10,6 +10,5 @@ public class BookController {
 		this.bookService = bookService;
 	}
 	
-	//TODO add ->take book details from user
 	
 }
