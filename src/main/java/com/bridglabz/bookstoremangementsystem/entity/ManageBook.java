@@ -1,5 +1,5 @@
 package com.bridglabz.bookstoremangementsystem.entity;
-
+//Dinesh
 public class ManageBook {
 	private String id;
 	private String userId;

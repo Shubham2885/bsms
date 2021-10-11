@@ -1,5 +1,5 @@
 package com.bridglabz.bookstoremangementsystem.entity;
-
+//Dinesh
 public class Book {
 	private String bookName;
 	private String bookId;
