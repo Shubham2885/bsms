@@ -5,10 +5,8 @@ import com.bridglabz.bookstoremangementsystem.interfaces.IBookService;
 public class BookController {
 
 	private IBookService bookService;
-
+	
 	public void setBookService(IBookService bookService) {
 		this.bookService = bookService;
-	}
-	
-	
+	}	
 }
