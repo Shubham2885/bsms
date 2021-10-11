@@ -1,12 +1,15 @@
 package com.bridglabz.bookstoremangementsystem.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.bridglabz.bookstoremangementsystem.entity.ManageBook;
+import com.bridglabz.bookstoremangementsystem.entity.User;
 import com.bridglabz.bookstoremangementsystem.interfaces.IManageBook;
 
 public class ManageBookDao implements IManageBook {
-
+	private List<ManageBook> manageBook = new ArrayList<ManageBook>();
+	
 	@Override
 	public void addManageBook(ManageBook manageBook) {
 		// TODO Auto-generated method stub
