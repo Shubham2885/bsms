@@ -37,20 +37,4 @@ public class ManageBookServiceImpl implements IManageBook {
 		
 		return null;
 	}
-	
-	public ManageBookController buyBook() {
-		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("Enter Book Name");
-		String bookName = scanner.next();
-		
-		System.out.println("Enter Auther Name");
-		String auther = scanner.next();
-		
-		System.out.println("Enter Book Edition");
-		int edition = scanner.nextInt();
-		
-		return new ManageBookController(bookName,auther,edition);
-	}
-	
 }
