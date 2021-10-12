@@ -5,7 +5,7 @@ import java.util.List;
 import com.bridglabz.bookstoremangementsystem.entity.User;
 
 public interface IUserDao {
-	void add(User user);
+	int add(User user);
 	void deleteById(int id);
 	void searchById(int id);
 	void updateById(int id);

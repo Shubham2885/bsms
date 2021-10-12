@@ -11,8 +11,9 @@ public class UserDao implements IUserDao {
 	private List<User> users = new ArrayList<User>();
 
 	@Override
-	public void add(User user) {
-		
+	public int add(User user) {
+		users.add(user);
+		return users.size();
 	}
 
 	@Override

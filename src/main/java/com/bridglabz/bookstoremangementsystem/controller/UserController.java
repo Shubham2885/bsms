@@ -11,20 +11,28 @@ public class UserController {
 
 	//addUser By Manoj
 	public void addUser() throws BookStoreMangementSystemException {
+		
 		User user = new User();
 		UserServiceImpl userService = new UserServiceImpl();
 		Scanner sc = new Scanner(System.in);
 		
-		user.setId(UtilScanner.getString("Enter User ID : "));
+		user.setId(UtilScanner.getString("User ID : "));
 		
-		user.setName(UtilScanner.getString("Enter User Name : "));
+		user.setName(UtilScanner.getString("User Name : "));
 		
-		user.setMobile(UtilScanner.getString("Enter User Mobile : "));
+		user.setMobile(UtilScanner.getString("User Mobile Number: "));
 		
-		user.setEmail(UtilScanner.getString("Enter User Email : "));
+		user.setEmail(UtilScanner.getString("User Email : "));
 
-		user.setAddress(UtilScanner.getString("Enter User Address : "));
+		user.setAddress(UtilScanner.getString("User Address : "));
 		
-		userService.add(user);
+		int resp = userService.add(user);
+		System.out.println("size = " + resp);
 	}
+	
+	public static void main(String[] args) throws BookStoreMangementSystemException {
+		UserController user = new UserController();
+		user.addUser();
+	}
+	
 }

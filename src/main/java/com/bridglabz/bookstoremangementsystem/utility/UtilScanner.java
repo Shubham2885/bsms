@@ -13,7 +13,7 @@ public class UtilScanner {
 
 	public static String getString(String message) {
 		message(message);
-		return SCANNER.next();
+		return SCANNER.nextLine();
 	}
 
 	public static double getDouble(String message) {
