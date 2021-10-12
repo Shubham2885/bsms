@@ -5,14 +5,24 @@ import java.util.List;
 
 import com.bridglabz.bookstoremangementsystem.entity.User;
 import com.bridglabz.bookstoremangementsystem.interfaces.IUserDao;
+import com.bridglabz.bookstoremangementsystem.utility.FileHandling;
 
 public class UserDao implements IUserDao {
 	
-	private List<User> users = new ArrayList<User>();
+	private FileHandling fileHandling;
+	
+	public UserDao() {
+		this.fileHandling = new FileHandling();
+	}
 
 	@Override
 	public int add(User user) {
+		List<User> users = fileHandling.readUser();
+		if(users == null) {
+			users = new ArrayList<User>();
+		}
 		users.add(user);
+		fileHandling.writeUser(users);
 		return users.size();
 	}
 
@@ -33,8 +43,7 @@ public class UserDao implements IUserDao {
 
 	@Override
 	public List<User> getAllUser() {
-		// TODO Auto-generated method stub
-		return null;
+		return fileHandling.readUser();
 	}
 
 }

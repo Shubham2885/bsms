@@ -8,5 +8,4 @@ public interface IUserService {
 	void deleteById();
 	void searchById();
 	void updateById();
-	void setUserDao(IUserDao userDao);
 }

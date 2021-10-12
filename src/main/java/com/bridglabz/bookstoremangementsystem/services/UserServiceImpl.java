@@ -11,11 +11,10 @@ import com.bridglabz.bookstoremangementsystem.utility.UtilValidation;
 
 public class UserServiceImpl implements IUserService {
 
-	IUserDao userDao = new UserDao();
+	private IUserDao userDao = null;
 	
-	@Override
-	public void setUserDao(IUserDao userDao) {
-		this.userDao = userDao;
+	public UserServiceImpl() {
+		userDao = new UserDao();
 	}
 
 	// addUser By Manoj

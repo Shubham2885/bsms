@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.bridglabz.bookstoremangementsystem.entity.User;
 import com.bridglabz.bookstoremangementsystem.exception.BookStoreMangementSystemException;
+import com.bridglabz.bookstoremangementsystem.interfaces.IUserService;
 import com.bridglabz.bookstoremangementsystem.services.UserServiceImpl;
 import com.bridglabz.bookstoremangementsystem.utility.UtilScanner;
 
@@ -13,7 +14,7 @@ public class UserController {
 	public void addUser() throws BookStoreMangementSystemException {
 		
 		User user = new User();
-		UserServiceImpl userService = new UserServiceImpl();
+		IUserService userService = new UserServiceImpl();
 		Scanner sc = new Scanner(System.in);
 		
 		user.setId(UtilScanner.getString("User ID : "));
