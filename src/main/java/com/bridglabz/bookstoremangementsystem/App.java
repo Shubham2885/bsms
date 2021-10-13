@@ -1,13 +1,20 @@
 package com.bridglabz.bookstoremangementsystem;
+import java.util.Scanner;
+
+import com.bridglabz.bookstoremangementsystem.controller.BookController;
+import com.bridglabz.bookstoremangementsystem.dao.BookDao;
+import com.bridglabz.bookstoremangementsystem.entity.Book;
+import com.bridglabz.bookstoremangementsystem.exception.BookStoreMangementSystemException;
+import com.bridglabz.bookstoremangementsystem.services.BookServiceImpl;
 //Dinesh
 import com.bridglabz.bookstoremangementsystem.utility.UtilScanner;
 
 public class App {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws BookStoreMangementSystemException {
 		App.menu();
 	}
 
-	public static void menu() {
+	public static void menu() throws BookStoreMangementSystemException{
 		boolean flag = false;
 
 		while (flag != true) {
@@ -17,7 +24,7 @@ public class App {
 				App.userMenu();
 				break;
 			case 2:
-				App.bookMenu();
+					App.bookMenu();
 				break;
 			case 3:
 				System.out.println("Exit!!");
@@ -50,17 +57,22 @@ public class App {
 		}
 	}
 
-	public static void bookMenu() {
+	public static void bookMenu() throws BookStoreMangementSystemException {
+		BookController bookController = new BookController();
+		BookDao bookDao = new BookDao();
 		boolean flag = false;
-
+		Scanner sc = new Scanner(System.in);
 		while (flag != true) {
-			int choice = UtilScanner.getInt("Enter\n1-Case1\n2-Case2\n3-Case3\n4-Exit");
+			System.out.println("Enter\n1-Add Book\n2-Display all Books\n3-Case3\n4-Exit");
+			int choice = sc.nextInt();
 			switch (choice) {
 			case 1:
-				System.out.println("Case 1 Called");
+				bookController.getBookInfo();
+				System.out.println("Book Added..");
 				break;
 			case 2:
-				System.out.println("Case 2 Called");
+				System.out.println("Display all Books...");
+				bookDao.getAllBook();
 				break;
 			case 3:
 				System.out.println("Case 3 Called");

@@ -1,31 +1,31 @@
 package com.bridglabz.bookstoremangementsystem.entity;
 
 //Dinesh
-import java.sql.Date;
+import java.util.Date;
 
 public class ManageBook {
 	private String id;
 	private String userId;
 	private String bookId;
 	private Date dateOfIssue;
-	private String quantity;
-	private String totalPrice;
+	private int quantity;
+	private int totalPrice;
 	private Date dateOfReturn;
 
 	public ManageBook() {
 		super();
 	}
 
-	public ManageBook(String id, String userId, String bookId, Date dateOfIssue, String quantity, String totalPrice,
-			Date dateOfReturn) {
+	public ManageBook(String id, String userId, String bookId, java.util.Date issueDate, int quantity, int totalPrize,
+			java.util.Date returnDate) {
 		super();
 		this.id = id;
 		this.userId = userId;
 		this.bookId = bookId;
-		this.dateOfIssue = dateOfIssue;
+		this.dateOfIssue = issueDate;
 		this.quantity = quantity;
-		this.totalPrice = totalPrice;
-		this.dateOfReturn = dateOfReturn;
+		this.totalPrice = totalPrize;
+		this.dateOfReturn = returnDate;
 	}
 
 	@Override
@@ -66,19 +66,19 @@ public class ManageBook {
 		this.dateOfIssue = dateOfIssue;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
-	public String getTotalPrice() {
+	public int getTotalPrice() {
 		return totalPrice;
 	}
 
-	public void setTotalPrice(String totalPrice) {
+	public void setTotalPrice(int totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 

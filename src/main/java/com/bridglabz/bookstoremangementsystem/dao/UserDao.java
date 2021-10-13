@@ -9,10 +9,10 @@ import com.bridglabz.bookstoremangementsystem.utility.FileHandling;
 
 public class UserDao implements IUserDao {
 	
-	private FileHandling fileHandling;
+	private FileHandling<User> fileHandling;
 	
 	public UserDao() {
-		this.fileHandling = new FileHandling();
+		this.fileHandling = new FileHandling<User>(new ArrayList<User>());
 	}
 
 	@Override
@@ -23,6 +23,7 @@ public class UserDao implements IUserDao {
 		}
 		users.add(user);
 		fileHandling.writeUser(users);
+		fileHandling.write2File("User.json",users);
 		return users.size();
 	}
 

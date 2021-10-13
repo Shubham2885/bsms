@@ -1,7 +1,5 @@
 package com.bridglabz.bookstoremangementsystem.interfaces;
 
-import java.util.List;
-
 import com.bridglabz.bookstoremangementsystem.entity.Book;
 
 public interface IBookDao {
@@ -9,5 +7,5 @@ public interface IBookDao {
 	void deleteById(String id);
 	void searchById(String id);
 	void updateById(String id);
-	List<Book> getAllBook();
+	void getAllBook();
 }

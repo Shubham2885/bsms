@@ -2,22 +2,31 @@ package com.bridglabz.bookstoremangementsystem.services;
 
 import com.bridglabz.bookstoremangementsystem.common.ErrorMessages;
 import com.bridglabz.bookstoremangementsystem.common.UtilRegex;
+import com.bridglabz.bookstoremangementsystem.dao.BookDao;
+import com.bridglabz.bookstoremangementsystem.dao.UserDao;
 import com.bridglabz.bookstoremangementsystem.entity.Book;
 import com.bridglabz.bookstoremangementsystem.exception.BookStoreMangementSystemException;
 import com.bridglabz.bookstoremangementsystem.interfaces.IBookDao;
 import com.bridglabz.bookstoremangementsystem.interfaces.IBookService;
+import com.bridglabz.bookstoremangementsystem.interfaces.IUserDao;
 import com.bridglabz.bookstoremangementsystem.utility.UtilValidation;
 
 public class BookServiceImpl implements IBookService {
+	
+	
+private IBookDao bookDao = null;
+	
+	public BookServiceImpl() {
+		bookDao = new BookDao();
+	}
 		
 	private IBookDao bookdb;
-
 	public void setBookDB(IBookDao bookService) {
 		this.bookdb = bookService;
 	}
 	@Override
 	public void addBook(Book book) throws BookStoreMangementSystemException {
-		if (book.getBookName().isEmpty() && book.getBookId().isEmpty() && book.getBookAuthor().isEmpty() && book.getBookDesc().isEmpty() && book.getBookPrice().isEmpty() && book.getBookType().isEmpty()) {
+		/*if (book.getBookName().isEmpty() && book.getBookId().isEmpty() && book.getBookAuthor().isEmpty() && book.getBookDesc().isEmpty() && book.getBookPrice().isEmpty() && book.getBookType().isEmpty()) {
 			throw new BookStoreMangementSystemException(ErrorMessages.FIELD_IS_EMPTY.getConstant());
 			
 		}else {
@@ -47,11 +56,11 @@ public class BookServiceImpl implements IBookService {
 					&& UtilValidation.isValid(book.getBookAuthor(), UtilRegex.NAME) && UtilValidation.isValid(book.getBookType(), UtilRegex.NAME) && UtilValidation.isValid(book.getBookPrice(), UtilRegex.PRICE) ) {
 				bookdb.add(book);
 				setBookDB(bookdb);
-				
+		
 			}
 			
-		}
-		
+		}*/
+		bookDao.add(book);
 	}
 
 
