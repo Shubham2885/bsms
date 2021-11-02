@@ -1,10 +1,13 @@
 package com.bridglabz.bookstoremangementsystem;
 import java.util.Scanner;
 
+import com.bridglabz.bookstoremangementsystem.common.BeanEnum;
+import com.bridglabz.bookstoremangementsystem.common.CreateBean;
 import com.bridglabz.bookstoremangementsystem.controller.BookController;
 import com.bridglabz.bookstoremangementsystem.dao.BookDao;
 import com.bridglabz.bookstoremangementsystem.entity.Book;
 import com.bridglabz.bookstoremangementsystem.exception.BookStoreMangementSystemException;
+import com.bridglabz.bookstoremangementsystem.interfaces.IBookService;
 import com.bridglabz.bookstoremangementsystem.services.BookServiceImpl;
 //Dinesh
 import com.bridglabz.bookstoremangementsystem.utility.UtilScanner;
@@ -34,7 +37,7 @@ public class App {
 		}
 	}
 
-	public static void userMenu() {
+	public static void userMenu() throws BookStoreMangementSystemException {
 		boolean flag = false;
 
 		while (flag != true) {
@@ -42,6 +45,9 @@ public class App {
 			switch (choice) {
 			case 1:
 				System.out.println("Add Method");
+				BookController bookController = new BookController();
+				bookController.setBookService((IBookService)CreateBean.getBean(BeanEnum.BOOKSERVICE));
+				bookController.getBookInfo();
 				break;
 			case 2:
 				System.out.println("Update Method");

@@ -13,7 +13,6 @@ import com.bridglabz.bookstoremangementsystem.utility.UtilScanner;
 public class BookController {
 
 	private IBookService bookService;
-	BookServiceImpl bookServiceImpl = new BookServiceImpl();
 	
 	public void setBookService(IBookService bookService) {
 		this.bookService = bookService;
